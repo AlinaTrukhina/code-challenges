@@ -10,17 +10,13 @@ let arr1 = [1, 2, 3, 4,];
 
 function spiralTraversal(matrix) {
     /* your code here */
-    let topRow = 0;
-    let bottomRow = matrix.length - 1;
-    let leftCol = 0;
-    let rightCol = matrix[0].length - 1;
     let dir = 0;
     let newArr = [];
     // outer loop to go around the matrix
     let i = 0;
     while(matrix.length > 0) {
     // inner loop 
-    // get into 1st array, while loop while there is a value in the array
+    // get into 1st array, for loop through the row forwards 
         if (dir == 0) {
             // let topR = matrix[0];
             // let topRlength = matrix[0].length;
@@ -32,6 +28,7 @@ function spiralTraversal(matrix) {
             matrix.shift();
             dir++;
         }
+        // for loop through the columns down
         if (dir == 1) {
             for(let col = 0; col < matrix.length; col++){
                 newVal = matrix[col].splice(matrix[col].length-1,1);
@@ -39,6 +36,7 @@ function spiralTraversal(matrix) {
             }
             dir++;
         }
+        // for loop through the row backwards 
         if (dir == 2) {
             for (let k = matrix[matrix.length - 1].length -1; k >= 0; k--) {
                 let newVal = matrix[matrix.length - 1].splice(k, 1);
@@ -47,6 +45,7 @@ function spiralTraversal(matrix) {
             matrix.pop();
             dir++;
         }
+        // for loop through the columns up
         if (dir == 3) {
             for(let col = matrix.length-1; col >= 0; col--){
                 newVal = matrix[col].splice(matrix[0],1);

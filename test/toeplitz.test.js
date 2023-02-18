@@ -5,7 +5,7 @@ describe('toeplitz', () => {
         expect(isToeplitz([[1 ,2, 3, 4], [5, 1, 2, 3], [6, 5, 1, 2], [7, 6, 5, 1]])).toBeTruthy()
     });
 
-    test('returns true', () => {
+    test('returns false', () => {
         expect(isToeplitz([[2 ,2, 3, 4], [5, 1, 2, 3], [6, 5, 1, 2], [7, 6, 5, 1]])).toBeFalsy()
     });
 

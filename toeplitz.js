@@ -41,7 +41,5 @@ function isToeplitz(m) {
 // let m = [[1 ,2, 3, 4], [5, 1, 2, 3], [6, 5, 1, 2], [7, 6, 5, 1]];
 
 // console.log(isToeplitz(m));
-let m = [[]];
-console.log(m[0]);
 
 module.exports = isToeplitz;

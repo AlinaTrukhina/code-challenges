@@ -1,4 +1,4 @@
-const comp = (...funs) => x => {
+const compose = (...funs) => x => {
   
     let i = 0;
     do {
@@ -8,15 +8,19 @@ const comp = (...funs) => x => {
   
     return x;
   
-  }
+};
   
-console.log(comp(
+console.log(compose(
 x => x - 1,
 x => x * 2,
 x => x + ' s'
 )(10));
 
-console.log(comp(
+console.log(compose(
 arg => arg.reduce((a, b) => a + b),
 x => x * x
 )([-7, 1, 8]));
+
+console.log(compose(10));
+
+module.exports = compose;

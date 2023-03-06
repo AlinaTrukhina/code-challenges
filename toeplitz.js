@@ -38,8 +38,8 @@ function isToeplitz(m) {
     return true;
 }
 
-// let m = [[1 ,2, 3, 4], [5, 1, 2, 3], [6, 5, 1, 2], [7, 6, 5, 1]];
+let m = [[1 ,2, 3, 4], [5, 1, 2, 3], [6, 5, 1, 2], [7, 6, 5, 1]];
 
-// console.log(isToeplitz(m));
+console.log(isToeplitz(m));
 
 module.exports = isToeplitz;
